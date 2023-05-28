@@ -1,0 +1,9 @@
+.model-wrapper {
+    width: 640px;
+    height: 480px;
+}
+
+#ui {
+    display: flex;
+    gap: 1rem;
+}
