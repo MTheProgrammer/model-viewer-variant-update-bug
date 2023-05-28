@@ -2,6 +2,10 @@
 
 ## Use case: update model variant and material with dynamic textures.
 Example model on [variants in model-viewer page](https://modelviewer.dev/examples/scenegraph/#variants) has textures embedded in gltf.
+Textures have the same PBR properties and are shared with many models.
+To prevent re-downloading of the same textures embedded in model, they're updated on demand for each material.
+
+For simplicity, this example has only one model.
 
 In `main.js` after variant is changed the active material matching the name pattern (`body_*`) receives update for textures.
 
