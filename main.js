@@ -65,11 +65,11 @@ async function updateMaterials(materialConfig) {
     /** Bug:
      * this line executes asynchronously, active material is not updated on time in findActiveMaterial
      */
-    modelViewer.variantName = variant;
+    // modelViewer.variantName = variant;
     /** Correct behavior:
      * Promise correctly updates active material assigned to the variant and resolved in the findActiveMaterial.
      */
-    // await Promise.resolve(() => modelViewer.variantName = variant);
+    await Promise.resolve(() => modelViewer.variantName = variant);
 
     const material = findActiveMaterial(modelViewer, materialName);
 
